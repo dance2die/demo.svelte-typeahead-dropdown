@@ -28,6 +28,20 @@
   input {
     display: block;
   }
+
+  .search {
+    width: 250px;
+  }
+
+  ul {
+    list-style: none;
+    height: 250px;
+    overflow-y: scroll;
+  }
+
+  ul > li {
+    padding: 0.5rem 0;
+  }
 </style>
 
 <h1>Hello {name}!</h1>
@@ -35,8 +49,12 @@
 
 <h2>You are querying "{query}"</h2>
 <section class="search">
-  <input type="text" bind:value={query} placeholder="search text" />
-  <article class="suggestions">
+  <input
+    class="search input"
+    type="text"
+    bind:value={query}
+    placeholder="search text" />
+  <article class="search suggestions">
     <ul>
       {#each suggestions.filter(s =>
         query && s.startsWith(query)

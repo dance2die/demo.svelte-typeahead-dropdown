@@ -50,23 +50,40 @@
   article.active {
     display: block;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  hr {
+    width: 50vw;
+  }
 </style>
 
-<h1>Hello {name}!</h1>
-<Counter />
+<section class="container">
 
-<h2>You are querying "{query}"</h2>
-<section class="search">
-  <input
-    class="search input"
-    type="text"
-    bind:value={query}
-    placeholder="search text" />
-  <article class:active={query} class="search suggestions">
-    <ul>
-      {#each suggestions.filter(s => query && s.startsWith(query)) as suggestion (suggestion)}
-        <li>{suggestion}</li>
-      {/each}
-    </ul>
-  </article>
+  <h1>Hello {name}!</h1>
+  <Counter />
+
+  <hr />
+
+  <h2>You are querying "{query}"</h2>
+  <section class="search">
+    <input
+      class="search input"
+      type="text"
+      bind:value={query}
+      placeholder="search text" />
+    <article class:active={query} class="search suggestions">
+      <ul>
+        {#each suggestions.filter(s => query && s.startsWith(query)) as suggestion (suggestion)}
+          <li>{suggestion}</li>
+        {/each}
+      </ul>
+    </article>
+  </section>
+
 </section>

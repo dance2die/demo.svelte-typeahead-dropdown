@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "dance2die",
+      "name": "Sung M. Kim",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8465237?v=4",
+      "profile": "https://twitter.com/dance2die",
+      "contributions": [
+        "design",
+        "code",
+        "infra"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "demo.svelte-typeahead-dropdown",
+  "projectOwner": "dance2die",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}

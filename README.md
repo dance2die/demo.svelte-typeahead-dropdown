@@ -1,5 +1,3 @@
-# What is this site?
-
 This is my first [Svelte](https://svelte.dev) website to try out some of the [tutorial](https://svelte.dev/tutorial/basics) content by implementing a typeahead dropdown list.
 
 ## Contributors
@@ -12,4 +10,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://tehpsalmist.com"><img src="https://avatars3.githubusercontent.com/u/26337310?v=4" width="100px;" alt="Ben Steward"/><br /><sub><b>Ben Steward</b></sub></a><br /><a href="https://github.com/dance2die/demo.svelte-typeahead-dropdown/commits?author=tehpsalmist" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

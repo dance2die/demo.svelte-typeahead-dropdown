@@ -6,6 +6,13 @@
   "commit": false,
   "contributors": [
     {
+      "login": "tehpsalmist",
+      "name": "Ben Steward",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26337310?v=4",
+      "profile": "https://tehpsalmist.com",
+      "contributions": ["code"]
+     },
+     {
       "login": "dance2die",
       "name": "Sung M. Kim",
       "avatar_url": "https://avatars1.githubusercontent.com/u/8465237?v=4",

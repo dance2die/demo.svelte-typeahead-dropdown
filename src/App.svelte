@@ -27,6 +27,7 @@
 
   input {
     display: block;
+    margin: 0;
   }
 
   .search {
@@ -37,10 +38,27 @@
     list-style: none;
     max-height: 250px;
     overflow-y: auto;
+
+    /* https://y34o5l3p61.codesandbox.io/ */
+    transition: opacity 0.1s ease;
+    border-radius: 0 0 0.28571429rem 0.28571429rem;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    border-color: #9b4dca;
+    border-top-width: 0px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-style: solid;
   }
 
-  ul > li {
-    padding: 0.5rem 0;
+  li {
+    margin: 0;
+    padding: 0.6rem 0.5rem;
+  }
+
+  li:hover {
+    background: rgba(0, 0, 0, 0.13);
+    color: black;
   }
 
   article {

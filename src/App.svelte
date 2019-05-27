@@ -42,6 +42,14 @@
   ul > li {
     padding: 0.5rem 0;
   }
+
+  article {
+    display: none;
+  }
+
+  article.active {
+    display: block;
+  }
 </style>
 
 <h1>Hello {name}!</h1>
@@ -54,11 +62,9 @@
     type="text"
     bind:value={query}
     placeholder="search text" />
-  <article class="search suggestions">
+  <article class:active={query} class="search suggestions">
     <ul>
-      {#each suggestions.filter(s =>
-        query && s.startsWith(query)
-      ) as suggestion (suggestion)}
+      {#each suggestions.filter(s => query && s.startsWith(query)) as suggestion (suggestion)}
         <li>{suggestion}</li>
       {/each}
     </ul>

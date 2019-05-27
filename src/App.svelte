@@ -35,8 +35,8 @@
 
   ul {
     list-style: none;
-    height: 250px;
-    overflow-y: scroll;
+    max-height: 250px;
+    overflow-y: auto;
   }
 
   ul > li {

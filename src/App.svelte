@@ -39,7 +39,7 @@
   <article class="suggestions">
     <ul>
       {#each suggestions.filter(s =>
-        s.startsWith(query)
+        query && s.startsWith(query)
       ) as suggestion (suggestion)}
         <li>{suggestion}</li>
       {/each}

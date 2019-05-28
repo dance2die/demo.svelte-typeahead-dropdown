@@ -18,20 +18,17 @@
     'help',
     'helping',
   ]
+
+  function handleSearchButton(e) {
+    if (query) {
+      query = ''
+    }
+  }
 </script>
 
 <style>
   h1 {
     color: purple;
-  }
-
-  input {
-    display: block;
-    margin: 0;
-  }
-
-  .search {
-    width: 250px;
   }
 
   ul {
@@ -61,19 +58,48 @@
     color: black;
   }
 
-  article {
-    display: none;
-  }
-
-  article.active {
-    display: block;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .search {
+    width: 250px;
+  }
+
+  .search.suggestions {
+    display: none;
+  }
+
+  .search.container {
+    position: relative;
+  }
+
+  .search.input.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .search input {
+    margin: 0;
+  }
+
+  .search button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    border: none;
+    background-color: transparent;
+    color: black;
+
+    margin: 0 -1rem;
+  }
+
+  .search.suggestions.active {
+    display: block;
   }
 
   hr {
@@ -90,11 +116,15 @@
 
   <h2>You are querying "{query}"</h2>
   <section class="search">
-    <input
-      class="search input"
-      type="text"
-      bind:value={query}
-      placeholder="search text" />
+    <article class="search container">
+      <input
+        class="search input"
+        class:active={query}
+        type="text"
+        bind:value={query}
+        placeholder="search text" />
+      <button on:click={handleSearchButton}>{query && '❌'}</button>
+    </article>
     <article class:active={query} class="search suggestions">
       <ul>
         {#each suggestions.filter(s => query && s.startsWith(query)) as suggestion (suggestion)}

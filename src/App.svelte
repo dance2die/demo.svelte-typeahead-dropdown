@@ -1,9 +1,11 @@
 <script>
   import Counter from './Counter.svelte'
 
-  export let name
+  let name
 
   let query = ''
+  let selectedQuery = undefined
+
   let suggestions = [
     'calendar-dates',
     'dangerous',
@@ -23,6 +25,12 @@
     if (query) {
       query = ''
     }
+  }
+
+  function handleItemClick(e, suggestion) {
+    e.preventDefault()
+    query = suggestion
+    selectedQuery = query
   }
 </script>
 
@@ -123,13 +131,14 @@
         class:active={query}
         type="text"
         bind:value={query}
+        on:input={() => (selectedQuery = '')}
         placeholder="search text" />
       <button on:click={handleSearchButton}>{query && '❌'}</button>
     </article>
-    <article class:active={query} class="search suggestions">
+    <article class:active={!selectedQuery && query} class="search suggestions">
       <ul>
         {#each suggestions.filter(s => query && s.startsWith(query)) as suggestion (suggestion)}
-          <li>{suggestion}</li>
+          <li on:click={e => handleItemClick(e, suggestion)}>{suggestion}</li>
         {/each}
       </ul>
     </article>

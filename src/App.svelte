@@ -56,6 +56,7 @@
   li:hover {
     background: rgba(0, 0, 0, 0.13);
     color: black;
+    cursor: pointer;
   }
 
   .container {
@@ -95,7 +96,7 @@
     background-color: transparent;
     color: black;
 
-    margin: 0 -1rem;
+    margin: 0 -2rem;
   }
 
   .search.suggestions.active {
